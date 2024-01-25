@@ -8,14 +8,16 @@ public class No2884 {
 		Scanner sc = new Scanner(System.in);
 		int h = sc.nextInt();
 		int m = sc.nextInt();
+		sc.close();
 		
-		if(h == 0) {
-			if(m < 45) {
+		if(m >= 45) {
+			m = m - 45;
+		} else {
+			h = h -1;
+			if(h < 0) {
 				h = 23;
 			}
-			m = 60 + m - 45;
-		} else {
-			m = 60 + m - 45;
+			m = 60 + m -45;
 		}
 		
 		System.out.println(h + " " + m);
